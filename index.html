@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ข้าวเหนียวมะม่วงป้าแจ๋ว</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Mali:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#F4FAF0; --surface:#FFFFFF; --ink:#14301F; --muted:#4F6B58;
+  --mango:#FFB400; --leaf:#1F5C3A; --berry:#D93A6A; --line:#CFE3D2;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1F16; --surface:#17301F; --ink:#EAF6E8; --muted:#A7C4AE; --line:#2A4A33;
+    --leaf:#7FD39F; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1F16; --surface:#17301F; --ink:#EAF6E8; --muted:#A7C4AE; --line:#2A4A33;
+  --leaf:#7FD39F; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Mali","Kanit",system-ui,sans-serif;line-height:1.7}
+h1,h2,h3{font-family:"Kanit",system-ui,sans-serif;line-height:1.2;margin:0}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(2.6rem,11vw,5.5rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{display:block;background:var(--mango);color:#14301F;width:fit-content;padding:0 .25em;border-radius:.15em;transform:rotate(-1.5deg);margin-top:.1em}
+.hero p{max-width:34ch;font-size:1.15rem;color:var(--muted);margin:22px 0 26px}
+.btn{display:inline-block;background:var(--leaf);color:#fff;border:0;border-radius:999px;padding:12px 26px;font:600 1rem "Kanit",sans-serif;cursor:pointer;text-decoration:none}
+:root[data-theme="dark"] .btn{color:#0F1F16}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#0F1F16}}
+.btn:focus-visible,.step button:focus-visible{outline:3px solid var(--berry);outline-offset:3px}
+
+section{padding:36px 0;border-top:2px dashed var(--line)}
+section h2{font-size:1.8rem;margin-bottom:18px}
+
+.menu{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.item{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.item .emoji{font-size:2.4rem}
